@@ -8,10 +8,11 @@ const port = 3000;
 
 dbConnection();
 
-app.use(cors({
-  origin: 'http:0.0.0.0',
-  credentials: true, 
-}));
+// app.use(cors({
+//   origin: 'http:0.0.0.0',
+//   credentials: true, 
+// }));
+app.use(cors());
 app.use(express.json());
 
 app.use('/signup', signUpRouter); 
