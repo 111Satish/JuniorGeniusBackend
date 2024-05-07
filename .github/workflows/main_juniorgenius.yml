@@ -59,4 +59,4 @@ jobs:
           app-name: 'JuniorGenius'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4428F2FF60A74E6D9ED4B64595DCB24F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_23C09851191A44E7AA93F79B6EC17485 }}
