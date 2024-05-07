@@ -1,18 +1,17 @@
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
-const bodyParser = require('body-parser');
 const signUpRouter = require('./routes/signUp');
 const loginRouter = require('./routes/login');
 const cors = require('cors');
+const dbConnection = require('./config'); 
 const app = express();
 const port = 3000;
 
+dbConnection();
+
 app.use(cors());
+app.use(express.json());
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-app.use('/signUp', signUpRouter);
+app.use('/signup', signUpRouter); 
 app.use('/login', loginRouter);
 
 app.listen(port, () => {
